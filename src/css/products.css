@@ -1,0 +1,121 @@
+
+.section-products {
+  background-color: var(--lightgrey);
+}
+.container-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+.title-products {
+  font-family: var(--first-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 36px;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+.card-container {
+  min-width: 320px ;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.image-products {
+  border-radius: 25px;
+  margin-bottom: 12px;
+  box-shadow: 6px 6px 4px 0 rgba(76, 76, 76, 0.25);
+ 
+
+}
+.card {
+border: 1px solid #d9d9d9;
+border-radius: 8px;
+padding: 16px;
+width: 240px;
+height: 375px;
+min-width: 240px;
+background-color: #d9d9d9;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 12pxpx;
+}
+.cart-text {
+ font-size: 14px;
+}
+.cart-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: start;
+  align-items: center;
+}
+.cart-price {
+  font-size: 14px;
+}
+.cart-price::after {
+ content: '|';
+}
+.cart-value {
+  font-size: 14px;
+}
+.btn-buy {
+  padding: 12px 26px;
+  border-radius: 25px;
+  color: var(--dark);
+  background-color: var(--navy-blue);
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn-buy:hover {
+  padding: 14px 28px;
+  background-color: var(--bg-acc);
+}
+@media (min-width: 667px) and (max-width: 767px) {
+  .card-container {
+    min-width: 600px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    min-width: calc((100%-20px)/2);
+  }
+}
+@media (min-width: 768px){
+  .card-container {
+    min-width: 768px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 36px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    min-width: calc((100%-20px)/3);
+  }
+}
+@media (min-width: 1440px){
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    row-gap: 24px;
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    min-width: calc((100%-48px)/5);
+  }
+}

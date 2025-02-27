@@ -54,14 +54,14 @@
 }
 .sub-buy {
   float: left;
-  width: 80%;
+  width: 60%;
   height: auto;
   clear: both;
   margin-top: 25px;
   margin-bottom: 5px;
   border-top: 1px solid var(--navy-blue);
   text-align: left;
-  padding-left: 64px;
+  padding-left: 14px;
 }
 .sub-buy .subtitle-buy {
   display: inline-block;
@@ -80,13 +80,20 @@
   text-align: center;
 }
 /* #endregion action */
-@media (min-width: 377px) and  (max-width: 767px) {
+ @media (min-width: 377px) and  (max-width: 767px) {
   .sub-buy .subtitle-buy {
-    font-size: 14px;
-    width: 300px;
-    padding: 0 10px;
+    /* font-size: 12px; */
+    width: 188px;
+    padding: 0;
   }
-}
+    .sub-buy {
+    
+      width: 75%;
+     
+      padding-left: 62px;
+    
+  }
+} 
 @media screen and (min-width: 768px) {
 
   /* #region action */
@@ -155,6 +162,10 @@
   font-size: 24px;
   line-height: 44px;
   text-decoration-line: underline;
+}
+.sub-buy {
+  width: 80%;
+  padding-left: 64px;
 }
 
 .action-list {

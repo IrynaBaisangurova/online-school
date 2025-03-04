@@ -20,7 +20,7 @@ close.addEventListener('click', function (){
 
 let products = null;
 // get data from file json
-fetch('/src/products.json')
+fetch('./product.json')
     .then(response => response.json())
     .then(data => {
         products = data;
@@ -42,8 +42,9 @@ function addDataToHTML(){
             newProduct.innerHTML = 
             `<img src="${product.image}" alt="">
             <h2>${product.name}</h2>
-            <div class="price">$${product.price}</div>
-            <button onclick="addCart(${product.id})">Add To Cart</button>`;
+             <div class="desc">${product.desc}</div>
+            <div class="price">₴${product.price} / 1 ${product.unit}</div>
+            <button onclick="addCart(${product.id})">Додати до кошика</button>`;
 
             listProductHTML.appendChild(newProduct);
 
@@ -99,7 +100,7 @@ function addCartToHTML(){
                     `<img src="${product.image}">
                     <div class="content">
                         <div class="name">${product.name}</div>
-                        <div class="price">$${product.price} / 1 product</div>
+                        <div class="price">₴${product.price} / 1 ${product.unit}</div>
                     </div>
                     <div class="quantity">
                         <button onclick="changeQuantity(${product.id}, '-')">-</button>

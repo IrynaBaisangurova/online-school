@@ -1,11 +1,7 @@
 
-@import url('./css/header.css');
-@import url('./css/footer.css');
-@import url('./css/base.css');
-@import url('./css/reset.css');
-@import url('./css/container.css');
 
-body{
+
+/* body{
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     font-synthesis: 15px;
@@ -15,44 +11,28 @@ a{
 }
 .section {
     padding: 200px 0;
-}
+} */
 .container{
     width: 1200px;
     margin: auto;
     max-width: 90%;
     transition: transform 1s;
 }
-header-product img{
+/* header-product img{
     width: 90px;
-}
+} */
+
 .title-products {
-    font-size: 56px;
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 32px;
 }
 header-product{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header-product .iconCart{
-    position: relative;
-    z-index: 1;
-}
-header-product .totalQuantity{
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: x-large;
-    background-color: red;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transform: translateX(20px);
-}
+
 .listProduct{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -111,14 +91,15 @@ header-product .totalQuantity{
     position: fixed;
     width: 400px;
     max-width: 80vw;
-    height: 100vh;
+    height: 80vh;
     background-color: #2f4960;
-    top: 0px;
+    top: 54px;
     right: -100%;
     display: grid;
     grid-template-rows: 50px 1fr 50px;
     gap: 20px;
     transition: right 1s;
+    z-index: 10;
 }
 
 .cart .buttons .checkout{
@@ -161,7 +142,16 @@ header-product .totalQuantity{
     width: 50px;
     text-align: center;
 }
-
+.subtitle-check {
+    margin-top: 34px;
+    margin-bottom: 24px;
+   font-weight: 500;
+   font-size: 20px;
+}
+.link-check {
+    text-decoration: underline;
+    color: #01cbcb;
+}
 .cart .listCart{
     padding: 20px;
     overflow: auto;
@@ -203,7 +193,7 @@ header-product .totalQuantity{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    border-bottom: 1px solid #fafafa;
+    /* border-bottom: 1px solid #fafafa; */
     padding-bottom: 20px;
 }
 .checkoutLayout .form h1,
@@ -219,7 +209,7 @@ header-product .totalQuantity{
     box-sizing: border-box;
     border-radius: 20px;
     margin-top: 10px;
-    border:#292929;
+    /* border:#292929; */
     background-color: #01cbcb;
     color: #292929;
 }
